@@ -4,4 +4,8 @@
     <string name="seleccionar_ejercicio">Seleccionar Ejercicio</string>
     <string name="btn_agregar">Agregar a la Rutina</string>
     <string name="ejercicios_agregados">Ejercicios Agregados</string>
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="placeholder_ejercicio">Sentadillas</string>
+    <string name="detalle_ejercicio">4 series x 10 reps</string>
+    <string name="desc_ejercicio">Imagen del ejercicio</string>
 </resources>
