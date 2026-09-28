@@ -85,10 +85,34 @@ public class MainActivity extends AppCompatActivity {
             imgEjercicio.setImageResource(R.drawable.img_press_banca);
         }
 
-        // botón Eliminar
+        // boton de eliminar
         btnEliminar.setOnClickListener(v -> {
             layoutContenedorEjercicios.removeView(tarjetaView);
             Toast.makeText(this, "Ejercicio eliminado", Toast.LENGTH_SHORT).show();
+        });
+
+        // boton de listo y saltar
+        Button btnListo = tarjetaView.findViewById(R.id.btnListo);
+        Button btnSaltar = tarjetaView.findViewById(R.id.btnSaltar);
+
+        // logica del botón Listo
+        btnListo.setOnClickListener(v -> {
+            tvNombre.setPaintFlags(tvNombre.getPaintFlags() | android.graphics.Paint.STRIKE_THRU_TEXT_FLAG);
+            // pone el fondo de la tarjeta verde
+            ((androidx.cardview.widget.CardView) tarjetaView).setCardBackgroundColor(android.graphics.Color.parseColor("#C8E6C9"));
+
+            // deshabilita los botones de listo y saltar, pero no el de elimiar
+            btnListo.setEnabled(false);
+            btnSaltar.setEnabled(false);
+        });
+
+        // logica del botón Saltar
+        btnSaltar.setOnClickListener(v -> {
+            tarjetaView.setAlpha(0.5f);
+
+            // lo mismo que en de listo
+            btnListo.setEnabled(false);
+            btnSaltar.setEnabled(false);
         });
 
         // agregar la tarjeta al ScrollView principal

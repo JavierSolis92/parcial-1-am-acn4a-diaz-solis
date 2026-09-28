@@ -53,12 +53,33 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnListo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listo"
+            android:textSize="12sp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnSaltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saltar"
+            android:textSize="12sp"
+            android:backgroundTint="#9E9E9E"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="4dp" />
+
+        <Button
             android:id="@+id/btnEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_eliminar"
-            android:textSize="12sp" />
-
+            android:textSize="12sp"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
