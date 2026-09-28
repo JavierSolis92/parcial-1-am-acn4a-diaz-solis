@@ -16,6 +16,7 @@
         android:padding="12dp"
         android:gravity="center_vertical">
 
+        <!-- Imagen a la izquierda -->
         <ImageView
             android:id="@+id/imgEjercicio"
             android:layout_width="80dp"
@@ -24,14 +25,15 @@
             android:contentDescription="@string/desc_ejercicio"
             android:src="@drawable/img_sentadilla" />
 
+        <!-- Contenedor derecho (Textos arriba, Botones abajo) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="8dp">
+            android:layout_marginStart="12dp">
 
+            <!-- Título y Detalle -->
             <TextView
                 android:id="@+id/tvNombreEjercicio"
                 android:layout_width="wrap_content"
@@ -48,38 +50,51 @@
                 android:text="@string/detalle_ejercicio"
                 android:textSize="14sp"
                 android:textColor="#6E6E73"
-                android:layout_marginTop="4dp" />
+                android:layout_marginTop="2dp" />
+
+            <!-- Fila de botones distribuidos equitativamente -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnListo"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Listo"
+                    android:textSize="11sp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="4dp"
+                    android:padding="0dp" />
+
+                <Button
+                    android:id="@+id/btnSaltar"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Saltar"
+                    android:textSize="11sp"
+                    android:backgroundTint="#9E9E9E"
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="4dp"
+                    android:padding="0dp" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Elim."
+                    android:textSize="11sp"
+                    android:backgroundTint="#F44336"
+                    android:textColor="@android:color/white"
+                    android:padding="0dp" />
+            </LinearLayout>
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnListo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Listo"
-            android:textSize="12sp"
-            android:backgroundTint="#4CAF50"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="4dp" />
-
-        <Button
-            android:id="@+id/btnSaltar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Saltar"
-            android:textSize="12sp"
-            android:backgroundTint="#9E9E9E"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="4dp" />
-
-        <Button
-            android:id="@+id/btnEliminar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_eliminar"
-            android:textSize="12sp"
-            android:backgroundTint="#F44336"
-            android:textColor="@android:color/white" />
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>
