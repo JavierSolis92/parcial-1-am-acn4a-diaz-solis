@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // opciones del Spinner
         String[] ejercicios = {
                 "Press de Banca Plano",
-                "Curl de Bíceps con Barra W",
+                "Press Frances con Barra W",
                 "Sentadilla Pesada",
                 "Peso Muerto"
         };
@@ -75,14 +75,16 @@ public class MainActivity extends AppCompatActivity {
         tvDetalle.setText(getString(R.string.detalle_ejercicio));
 
         // cambiar la imagen dinámicamente según el texto
-        if (nombreEjercicio.contains("Press")) {
+        if (nombreEjercicio.contains("Banca")) {
             imgEjercicio.setImageResource(R.drawable.img_press_banca);
+        } else if (nombreEjercicio.contains("Frances")) {
+            imgEjercicio.setImageResource(R.drawable.img_press_frances);
         } else if (nombreEjercicio.contains("Sentadilla")) {
             imgEjercicio.setImageResource(R.drawable.img_sentadilla);
         } else if (nombreEjercicio.contains("Peso Muerto")) {
             imgEjercicio.setImageResource(R.drawable.img_peso_muerto);
         } else {
-            // imagen por defecto si no coincide ninguna
+            // imagen por defecto si no coincide con ninguna
             imgEjercicio.setImageResource(R.drawable.img_press_banca);
         }
 
