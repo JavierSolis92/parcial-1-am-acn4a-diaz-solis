@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamano_texto_boton">11sp</dimen>
+    <dimen name="altura_boton">40dp</dimen>
+    <dimen name="margen_pequeno">4dp</dimen>
+</resources>

@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="fondo_tarjeta">#E0E0E0</color>
+    <color name="texto_principal">#1D1D1F</color>
+    <color name="texto_secundario">#6E6E73</color>
+
+    <color name="btn_agregar">#007AFF</color>
+    <color name="estado_listo">#4CAF50</color>
+    <color name="estado_saltar">#9E9E9E</color>
+    <color name="estado_eliminar">#F44336</color>
+    <color name="fondo_completado">#C8E6C9</color>
 </resources>

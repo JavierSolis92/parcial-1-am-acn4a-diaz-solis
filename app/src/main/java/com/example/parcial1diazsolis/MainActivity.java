@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         // asignar datos dinámicos
         tvNombre.setText(nombreEjercicio);
-        tvDetalle.setText("Series de alta intensidad");
+        tvDetalle.setText(getString(R.string.detalle_ejercicio));
 
         // cambiar la imagen dinámicamente según el texto
         if (nombreEjercicio.contains("Press")) {
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         // boton de eliminar
         btnEliminar.setOnClickListener(v -> {
             layoutContenedorEjercicios.removeView(tarjetaView);
-            Toast.makeText(this, "Ejercicio eliminado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.toast_eliminado), Toast.LENGTH_SHORT).show();
         });
 
         // boton de listo y saltar
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         btnListo.setOnClickListener(v -> {
             tvNombre.setPaintFlags(tvNombre.getPaintFlags() | android.graphics.Paint.STRIKE_THRU_TEXT_FLAG);
             // pone el fondo de la tarjeta verde
-            ((androidx.cardview.widget.CardView) tarjetaView).setCardBackgroundColor(android.graphics.Color.parseColor("#C8E6C9"));
+            ((androidx.cardview.widget.CardView) tarjetaView).setCardBackgroundColor(ContextCompat.getColor(this, R.color.fondo_completado));
 
             // deshabilita los botones de listo y saltar, pero no el de elimiar
             btnListo.setEnabled(false);

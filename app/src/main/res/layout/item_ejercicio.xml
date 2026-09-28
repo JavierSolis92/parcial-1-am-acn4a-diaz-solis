@@ -16,7 +16,6 @@
         android:padding="12dp"
         android:gravity="center_vertical">
 
-        <!-- Imagen a la izquierda -->
         <ImageView
             android:id="@+id/imgEjercicio"
             android:layout_width="80dp"
@@ -25,7 +24,6 @@
             android:contentDescription="@string/desc_ejercicio"
             android:src="@drawable/img_sentadilla" />
 
-        <!-- Contenedor derecho (Textos arriba, Botones abajo) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -33,7 +31,6 @@
             android:orientation="vertical"
             android:layout_marginStart="12dp">
 
-            <!-- Título y Detalle -->
             <TextView
                 android:id="@+id/tvNombreEjercicio"
                 android:layout_width="wrap_content"
@@ -52,7 +49,6 @@
                 android:textColor="#6E6E73"
                 android:layout_marginTop="2dp" />
 
-            <!-- Fila de botones distribuidos equitativamente -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,36 +58,36 @@
                 <Button
                     android:id="@+id/btnListo"
                     android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/altura_boton"
                     android:layout_weight="1"
-                    android:text="Listo"
-                    android:textSize="11sp"
-                    android:backgroundTint="#4CAF50"
-                    android:textColor="@android:color/white"
-                    android:layout_marginEnd="4dp"
+                    android:text="@string/btn_listo"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:backgroundTint="@color/estado_listo"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="@dimen/margen_pequeno"
                     android:padding="0dp" />
 
                 <Button
                     android:id="@+id/btnSaltar"
                     android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/altura_boton"
                     android:layout_weight="1"
-                    android:text="Saltar"
-                    android:textSize="11sp"
-                    android:backgroundTint="#9E9E9E"
-                    android:textColor="@android:color/white"
-                    android:layout_marginEnd="4dp"
+                    android:text="@string/btn_saltar"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:backgroundTint="@color/estado_saltar"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="@dimen/margen_pequeno"
                     android:padding="0dp" />
 
                 <Button
                     android:id="@+id/btnEliminar"
                     android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/altura_boton"
                     android:layout_weight="1"
-                    android:text="Elim."
-                    android:textSize="11sp"
-                    android:backgroundTint="#F44336"
-                    android:textColor="@android:color/white"
+                    android:text="@string/btn_eliminar"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:backgroundTint="@color/estado_eliminar"
+                    android:textColor="@color/white"
                     android:padding="0dp" />
             </LinearLayout>
 

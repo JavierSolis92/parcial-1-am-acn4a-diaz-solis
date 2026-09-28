@@ -8,4 +8,7 @@
     <string name="placeholder_ejercicio">Sentadillas</string>
     <string name="detalle_ejercicio">4 series x 10 reps</string>
     <string name="desc_ejercicio">Imagen del ejercicio</string>
+    <string name="btn_listo">Listo</string>
+    <string name="btn_saltar">Saltar</string>
+    <string name="toast_eliminado">Ejercicio eliminado</string>
 </resources>
